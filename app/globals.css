@@ -2,32 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    background-color: whitesmoke;
+    overscroll-behavior: none;
+    
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+nav{
+    background-color: whitesmoke;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.search-bar{
+    background-color: whitesmoke;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.service-card{
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card1{
+    height: 350px;
+    width: 350px;
+    background-image: url("/jobs.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+}
+
+
+
+.card2{
+    height: 350px;
+    width: 350px;
+    background-image: url("/resume.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.card3{
+    height: 350px;
+    width: 350px;
+    background-image: url("/courses_offered.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.card4{
+    height: 350px;
+    width: 350px;
+    background-image: url("/events2.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.service-card-text{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.logo-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional: background color for the container */
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.logos img {
+    height: 100px; /* Adjust based on your requirements */
+    margin: 0 10px; /* Spacing between logos */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
